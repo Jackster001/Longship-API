@@ -125,7 +125,7 @@ router.post('/accept_request',
 })
 
 // @route GET /api/profile/open_chat
-// @desc opens message box
+// @desc Opens Message Box
 // @access Private
 router.post('/open_chat', 
     passport.authenticate('jwt', { session: false }),

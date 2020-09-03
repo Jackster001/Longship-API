@@ -11,7 +11,7 @@ var passport =  require('passport');
 const User = require('../../models/User')
 
 // @route POST api/users/register
-// @desc register
+// @desc Register a User
 // @access Public
 router.post('/register', async (req, res)=>{
     try{
@@ -41,7 +41,7 @@ router.post('/register', async (req, res)=>{
 })
 
 // @route POST api/users/login
-// @desc login
+// @desc Logs in a User
 // @access Public
 router.post('/login', async(req, res)=>{
     try{
@@ -69,7 +69,7 @@ router.post('/login', async(req, res)=>{
 })
 
 // @route GET api/users/current
-// @desc returns current user
+// @desc Returns Current User
 // @access Public
 router.get('/current', passport.authenticate('jwt', {session:false}), async(req, res)=> {
     try{

@@ -22,8 +22,8 @@ const io = require('socket.io')(server);
 
 //connecting to database
 // const mongo_uri = `mongodb://localhost/${PORT}`;
-const mongo_uri = `mongodb://localhost/${PORT}`;
-// const mongo_uri =  `mongodb+srv://dbJackie:Jackie654321@chat-app-cluster-tqqdk.gcp.mongodb.net/test?retryWrites=true&w=majority`
+// const mongo_uri = `mongodb://localhost/${PORT}`;
+const mongo_uri =  `mongodb+srv://dbJackie:Jackie654321@chat-app-cluster-tqqdk.gcp.mongodb.net/test?retryWrites=true&w=majority`
 mongoose.connect(mongo_uri, {autoIndex: false, useNewUrlParser: true, useUnifiedTopology: true}).then(
   ()=> console.log(`Successfully connected to ${mongo_uri}`)
 ).catch(err=> console.log(err))
